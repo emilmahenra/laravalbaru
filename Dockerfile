@@ -1,4 +1,6 @@
 FROM ubuntu:16.04
+RUN apt update 
+RUN add-apt-repository ppa:ondrej/php -y 
 RUN apt update && apt install php php-mbstring php-gd php-xml php-pdo apache2 unzip -y
 ADD bahan.zip /var/phpunit/
 WORKDIR /var/phpunit
