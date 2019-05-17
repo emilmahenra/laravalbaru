@@ -7,9 +7,7 @@ COPY composer.sh .
     RUN chmod +x composer.sh && ./composer.sh
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash - && yum remove epel-release -y && yum install nodejs npm -y
 RUN git clone https://github.com/emilmahenra/laravalbaru.git && \
-    cd laravel-5-boilerplate && composer install && npm install -f && npm install acorn && npm run dev
-
-COPY env laravel-5-boilerplate/.env
+    cd laravelbaru && composer install && npm install -f && npm install acorn && npm run dev
 RUN cd laravelbaru && php artisan key:generate && php artisan migrate && php artisan db:seed && npm run dev && \
     php artisan storage:link
 WORKDIR laravelbaru
