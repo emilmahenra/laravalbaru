@@ -11,4 +11,5 @@
          interactive: yes
          tty: yes
          detach: yes
-exposed_port: 8080
+         exposed_port: 8080
+         published_ports: 80:8080
