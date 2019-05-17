@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: docker
   tasks:
      - name: install python
        yum:
