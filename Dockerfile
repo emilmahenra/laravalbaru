@@ -10,4 +10,4 @@ RUN git clone https://github.com/emilmahenra/laravalbaru.git && \
     cd laravalbaru && composer install && npm install -f && npm install acorn && npm run dev && php artisan key:generate && php artisan migrate && php artisan db:seed && npm run dev && \
     php artisan storage:link
 WORKDIR laravelbaru
-CMD php artisan serve --host=0.0.0.0 --port=8080
+CMD php laravelbaru/artisan serve --host=0.0.0.0 --port=8080
